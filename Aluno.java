@@ -1,15 +1,17 @@
 public class Aluno extends GerenciadorAlunos{
     private String nomeAluno;
     private int idadeAluno;
-    private long numeroMatricula;
+    private Aluno numeroMatricula;
     private String cpf;
 
-    public Aluno(String nomeAluno, int idadeAluno, long numeroMatricula, String cpf) {
+    //construtor do objeto;
+    public Aluno(String nomeAluno, int idadeAluno ,Aluno numeroMatricula, String cpf) {
         this.nomeAluno = nomeAluno;
         this.idadeAluno = idadeAluno;
         this.numeroMatricula = numeroMatricula;
         this.cpf=cpf;
     }
+    //getters dos atributos;
 
     public String getCpf() {
         return cpf;
@@ -23,8 +25,9 @@ public class Aluno extends GerenciadorAlunos{
         return idadeAluno;
     }
 
-    public long getNumeroMatricula() {
+    public Aluno getNumeroMatricula() {
         return numeroMatricula;
+
     }
 
 

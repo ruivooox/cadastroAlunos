@@ -6,14 +6,21 @@ public class Main {
         GerenciadorAlunos alunos=new GerenciadorAlunos();
         int menuInicial;
 
+       // alunos.gerarMatricula();
+
+
+
+
+
+
         do {
             System.out.println("1.Inscrever Aluno \n2.Buscar Aluno \n3.Lista de Alunos \n4.Sair");
             menuInicial= scan.nextInt();
 
             switch (menuInicial){
                 case 1:
-                    System.out.println("Matricula do Aluno");
-                    long matriculaAluno=scan.nextLong();
+//                     System.out.println("Matricula do Aluno");
+//                     long matriculaAluno=scan.nextLong();
 
                     scan.nextLine();
 
@@ -35,8 +42,8 @@ public class Main {
 
                     System.out.println("Idade do Aluno");
                     int idade= scan.nextInt();
-
-                    Aluno aluno=new Aluno(nomeAluno,idade,matriculaAluno,cpf);
+                    Aluno gerarMatricula=alunos.gerarMatricula();
+                    Aluno aluno=new Aluno(nomeAluno,idade,gerarMatricula,cpf);
                     alunos.listarAlunos(aluno);
 
                     break;
@@ -45,7 +52,7 @@ public class Main {
                     long matriculaBuscada=scan.nextLong();
                     scan.nextLine();
 
-                    Aluno alunoEncontrado=alunos.buscaAluno(matriculaBuscada);
+                  //  Aluno alunoEncontrado=alunos.buscaAluno(matriculaBuscada);
                     break;
                 case 3:
                     System.out.println("Lista de Alunos: ");
